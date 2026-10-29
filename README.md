@@ -84,7 +84,7 @@
                             Tel: +60 13 650 2508 | Email: adibfarhanzaime@gmail.com
                         </div>
                         <div>
-                            <span class="font-bold text-slate-800">2) Ts. Prof. Dr. Lai Chee Sern</span><br>
+                            <span class="font-bold text-slate-800">2) Prof. Ts. Dr. Lai Chee Sern</span><br>
                             Pensyarah Kanan, FPTK, UTHM | Tel: +60 12 576 8327 | Email: lcsern@uthm.edu.my
                         </div>
                     </div>
@@ -95,12 +95,6 @@
                     <div class="border-b pb-3 border-slate-100">
                         <h3 class="text-base font-bold text-slate-900">Seksyen A: Demografi / Section A: Demographics</h3>
                         <p class="text-xs text-slate-500">Arahan: Sila tanda ( X ) atau isi ruangan yang berkenaan / Instruction: Please mark ( X ) or fill in the appropriate box:</p>
-                    </div>
-
-                    <!-- Nama -->
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-800 mb-1">Nama Responden / Name <span class="text-red-500">*</span></label>
-                        <input type="text" name="nama" required class="w-full p-3 text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Masukkan nama penuh anda">
                     </div>
 
                     <!-- Jantina -->
@@ -146,12 +140,8 @@
                         <label class="block text-sm font-semibold text-slate-800 mb-2">3. Pendidikan / Education level <span class="text-red-500">*</span></label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <label class="flex items-center p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50">
-                                <input type="radio" name="pendidikan" value="Diploma" required class="w-4 h-4 text-emerald-600">
-                                <span class="ml-2 text-sm text-slate-700">Diploma</span>
-                            </label>
-                            <label class="flex items-center p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50">
-                                <input type="radio" name="pendidikan" value="Diploma Kemahiran Malaysia" class="w-4 h-4 text-emerald-600">
-                                <span class="ml-2 text-sm text-slate-700">Diploma Kemahiran Malaysia</span>
+                                <input type="radio" name="pendidikan" value="Diploma / Diploma Kemahiran Malaysia" required class="w-4 h-4 text-emerald-600">
+                                <span class="ml-2 text-sm text-slate-700">Diploma / Diploma Kemahiran Malaysia</span>
                             </label>
                             <label class="flex items-center p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50">
                                 <input type="radio" name="pendidikan" value="Diploma Lanjutan Kemahiran Malaysia" class="w-4 h-4 text-emerald-600">
@@ -342,7 +332,7 @@
 
     <!-- JS LOGIC -->
     <script>
-        // URL Web App Google Apps Script Baharu Anda
+        // URL Web App Google Apps Script
         const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzSTXRh7UQUFKDHA7kPa42i8GCWfOJZWbO0UyMwQgl6B9yJILYeBPDGoCiAs06c8YAM/exec";
 
         const likertOptions = [
@@ -575,11 +565,11 @@
 
             let summaryHTML = `
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-2 bg-slate-50 p-4 rounded-xl border border-slate-200 mb-4">
-                    <p><strong>Nama:</strong> ${data.nama || '-'}</p>
                     <p><strong>Jantina:</strong> ${data.jantina || '-'}</p>
                     <p><strong>Umur:</strong> ${data.umur || '-'}</p>
                     <p><strong>Pendidikan:</strong> ${data.pendidikan || '-'}</p>
                     <p><strong>Pengalaman:</strong> ${data.pengalaman || '-'}</p>
+                    <p><strong>Subjek/Modul:</strong> ${data.subjek || '-'}</p>
                     <p><strong>Kolej Vokasional:</strong> ${data.kv || '-'}</p>
                 </div>
             `;
